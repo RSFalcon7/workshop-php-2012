@@ -1,0 +1,61 @@
+@charset "utf-8";
+.reveal h2,
+.reveal h3 {
+  border-bottom: solid
+}
+
+#authorinfo ,
+#presentationinfo {
+  list-style: none;
+}
+
+#authorinfo li ,
+#presentationinfo li {
+  text-align: center;
+}
+
+#authorinfo li.name {
+  font-weight: bold;
+}
+
+#authorinfo li.mail ,
+#presentationinfo li.date {
+  font-size: smaller;
+}
+
+span.large {
+  font-size: 2em;
+}
+
+p.big {
+  font-size: 5em;
+}
+
+span.reallybig {
+  font-size: 10em;
+}
+
+ul.logos {
+  display: block;
+  text-align: center;
+}
+
+ul.logos li {
+  list-style: none;
+  display: inline;
+}
+
+ul.logos li img {
+  height: 1.5em;
+  background: none;
+  box-shadow: none;
+  border: none;
+}
+
+dd {
+  text-align: center;
+}
+
+.reveal h3 {
+  border: none;
+}

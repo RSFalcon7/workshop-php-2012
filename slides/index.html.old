@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Plazr - Gamification</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/custom.css" id="themecustom">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<!-- Cover -->
+				<section>
+					<h1>PlazR</h1>
+					<h2>Gamification</h2>
+					<section>
+						<p>
+							<ul class="authors">
+								<li>Pedro&nbsp;&nbsp;Costa</li>
+								<li class="last">Rafael&nbsp;&nbsp;Silva</li>
+							</ul>
+							Braga, Novembro 2012
+						</p>
+					</section>
+					<section>
+						<ol>
+							<li>
+								<a href="#/1">Utilizadores</a>
+							</li>
+							<li>
+								<a href="#/2">Visitas</a>
+							</li>
+							<li>
+								<a href="#/3">Compras</a>
+							</li>
+							<li>
+								<a href="#/4">Opiniões</a>
+							</li>
+						</ol>
+					</section>
+				</section>
+
+				
+				<!-- Mais utilizadores -->
+				<section>
+					<h3>Utilizadores</h3>
+					<section>
+						<h4>Objectivos</h4>
+						<ul>
+							<li>Captar mais utilizadores;</li>
+							<li>Divulgar a plataforma.</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Mecanismos</h4>
+						<ul>
+							<li>Referências</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Recompensas</h4>
+						<ol>
+							<li>
+								<strong>Crédito</strong>
+								<ul>
+									<li>&le; lucro obtido com a primeira compra da refencia;</li>
+								</ul>
+							</li>
+							<!-- Acho que a competicao é mais a nível d"os níveis",
+								da maneira como esta nao faz muito sentido -->
+							<!-- Conquistas/achievements são sempre um motivo de competição
+							entre utilizadores. Pega num MMOG como o WoW: eles acrescentaram
+							os achievements ao jogo num determinado patch, vindas do nada. No
+							espaço de um, dois meses no máximo, tornou-se um dos atributos
+							mais importantes na selecção de jogadores para integrarem as equipas
+							no jogo.
+								 Also, Conquistas não são níveis, podem ser dois factores de
+							competição paralelos. -->
+							<li>
+
+								<strong>Conquistas</strong>
+								<ul>
+									<li>competição entre utilizadores;</li>
+								</ul>
+							</li>
+							<li>
+								<strong>Níveis</strong>
+								<ul>
+									<li>a cada <em>n</em> utilizadores referidos;</li>
+									<li>outras recompensas a cada nível (e.g., brindes);</li>
+								</ul>
+							</li>
+						</ol>
+					</section>
+				</section>
+
+				<!-- Mais visitas -->
+				<section>
+					<h3>Visitas</h3>
+					<section>
+						<h4>Objectivos</h4>
+						<ul>
+							<li>Aumentar o número de vezes que os utilizadores visitam a plataforma;</li>
+							<li>Incentivar o hábito de visita;</li>
+							<li>Aumentar o número de lojas visitadas;</li>
+							<li>Aumentar o tempo de permanência em cada visita;</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Mecanismos</h4>
+						<ul>
+							<li>Missões;</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Recompensas</h4>
+						<ol>
+							<li>
+								<strong>Progressão</strong>
+								<ul>
+									<li>as missões vão ficando mais difíceis;</li>
+								</ul>
+							</li>
+							<li>Conquistas;</li>
+							<li>Níveis;</li>
+							<li>Crédito.</li>
+						</ol>
+					</section>
+					<section>
+						<h4>Exemplos</h4>
+						<ul>
+							<li>Caça ao tesouro;</li>
+							<li>Avaliação de reviews;</li>
+						</ul>
+					</section>
+				</section>
+
+				<!-- Mais compras -->
+				<section>
+					<h3>Compras</h3>
+					<section>
+						<h4>Objectivos</h4>
+						<ul>
+							<li>Aumentar o volume de vendas;</li>
+							<li>Divulgar novas lojas.</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Mecanismos</h4>
+						<ul>
+							<li>Colecções.</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Recompensas</h4>
+						<ol>
+							<li>
+								Conquistas
+								<ul>
+									<li>com base no tipo de colecções completadas;</li>
+								</ul>
+							</li>
+							<li>
+								<strong>Competição</strong>
+								<ul>
+									<li>os utilizadores competem para completar mais colecções;</li>
+									<li>colecções mais caras valem mais;</li>
+									<li>colecções adaptadas segundo o historial de compras do utilizador.</li>
+								</ul>
+							</li>
+						</ol>
+					</section>
+					<section>
+						<h4>Exemplos</h4>
+						<ul>
+							<li>
+								Kit "Cinema em casa"
+								<ul>
+									<li>TV</li>
+									<li>Blu-ray</li>
+									<li>Sistema de som</li>
+								</ul>
+							</li>
+							<li>
+								Kit Natal "Forever Alone"
+								<ul>
+									<li>Aletria instantânea</li>
+									<li>Bacalhau para um</li>
+									<li>Auto-prendas</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+				</section>
+
+				<!-- Mais e melhores reviews -->
+				<section>
+					<h3>Opiniões</h3>
+					<section>
+						<h4>Objectivos</h4>
+						<ul>
+							<li>Incentivar a submissão de reviews;</li>
+							<li>Aumentar a qualidade das mesmas;</li>
+							<!-- Por mais tosca que seja a review, é a opinião do comprador -->
+							<!-- Reviews toscas, só com o intuito de prejudicar uma store em prol
+							de outra não têm cabimento. Os utilizadores não são sempre imparciais,
+							as opiniões valem o que valem, e valem sempre mais quando são fundamen-
+							tadas. -->
+							<li><del>Excluir</del> reviews não fundamentadas.</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Mecanismos</h4>
+						<ul>
+							<li>Missões;</li>
+							<li><em>Peer assessment</em>.</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Recompensas</h4>
+						<ul>
+							<li>Estatuto;</li>
+							<li>Níveis;</li>
+							<li>Conquistas;</li>
+							<li>Competição;</li>
+							<li>Crédito.</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Exemplos</h4>
+						<ul>
+							<li>
+								Após uma compra, o utilizador recebe a missão de submeter uma opinião relativamente à loja e ao produto que obteu;
+							</li>
+							<li>
+								Outros utilizadores recebem a missão de avaliar a review.
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h1>PlazR</h1>
+					<h2>Gamification</h2>
+					<section>
+						<p>
+							<ul class="authors">
+								<li>Pedro&nbsp;&nbsp;Costa</li>
+								<li class="last">Rafael&nbsp;&nbsp;Silva</li>
+							</ul>
+						</p>
+						<p class="big">
+							- ? -
+						</p>
+					</section>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

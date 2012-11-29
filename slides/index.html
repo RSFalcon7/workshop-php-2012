@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="pt">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Plazr - Gamification</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.min.css" id="theme">
+		<link rel="stylesheet" href="css/custom.css" id="themecustom">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/github.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<section>
+					<h1>Workshop <strong>PHP</strong></h1>
+					<section>
+						<ul id="authorinfo">
+							<li class="name">Pedro Costa</li>
+							<li class="mail">pdrcosta90@gmail.com</li>
+						</ul>
+						<ul class="logos">
+							<li>
+								<img src="../global/images/cesium.png" />
+							</li>
+							<li>
+								<img src="../global/images/caos.png" />
+							</li>
+						</ul>
+						<ul id="presentationinfo">
+							<li class="date">Braga, Novembro 2012</li>
+						</ul>
+					</section>
+
+					<section>
+						<ol>
+							<li>
+								<a href="#what">O que é PHP</a>
+							</li>
+							<li>
+								<a href="#why">Porquê aprender/usar PHP</a>
+							</li>
+							<li>
+								<a href="#how">A linguagem</a>
+							</li>
+							<li>
+								<a href="#where">Server-side scripting</a>
+							</li>
+							<li>
+								<a href="#memory">Bases de dados</a>
+							</li>
+							<li>
+								<a href="#fun">!!! Demo !!!</a>
+							</li>
+						</ol>
+					</section>
+
+					<section>
+						<h2>Disclaimer</h2>
+						<ul>
+							<li>Eu <strong><em>NÃO</em></strong> sou um guru de PHP</li>
+							<li>Eu <strong><em>NÃO</em></strong> sou um devoto de PHP</li>
+							<li>Eu <strong><em>NÃO</em></strong> tenho experiência profissional com PHP</li>
+						</ul>
+						<div style="padding-top:1em;">
+							<p style="font-size:larger;text-decoration:underline;">Isto é para principiantes</p>
+						</div>
+					</section>
+
+					<section>
+						<h2>Setup</h2>
+						<dl>
+							<dt>AMP</dt>
+							<dd><a href="http://www.apachefriends.org/en/index.html">http://www.apachefriends.org/en/index.html</a></dd>
+
+							<dt>Ubuntu</dt>
+							<dd>
+								<pre><code>$ sudo apt-get install apache2 \
+mysql-server php5 php5-mysql</code></pre>
+							</dd>
+
+							<dt>Vagrant</dt>
+							<dd>
+								<a href="http://vagrantup.com/">http://vagrantup.com/</a>
+							</dd>
+						</dl>
+					</section>
+				</section>
+
+				<section id="what">
+					<h2>The <em>what</em></h2>
+					<p><span class="large">P</span>HP: <span class="large">H</span>ypertext <span class="large">P</span>reprocessor</p>
+					<ul>
+						<li>Scripting</li>
+						<li>Open source</li>
+						<li>General purpose</li>
+					</ul>
+				</section>
+
+				<section id="why">
+					<h2>The <em>why</em></h2>
+					<section>
+						<ul>
+							<li>Server-side scripting<ul>
+								<li>HTML sozinho é estático;</li>
+								<li>Client-side scripts têm o código exposto;</li>
+								<li>A página é processada antes de ser enviada ao <em>browser;</em></li>
+								<li>O utilizador vê um resultado estático;</em></li>
+							</ul></li>
+							<li>Linha de comandos</li>
+							<li>Desktop apps (PHP-GTK)<ul>
+								<li><em>perigoso...</em></li>
+							</ul></li>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<li>Maturidade</li>
+							<li>Bibliotecas</li>
+							<li>Comunidade</li>
+							<li>Grátis</li>
+						</ul>	
+					</section>
+				</section>
+
+				<section id="how">
+					<h2>The <em>how</em></h2>
+					<section>
+						<ul>
+							<li>Parecido a C/C++</li>
+							<li>Paradigma: Imperativo</li>
+							<li>Suporta Object-Oriented<ul>
+								<li><em>meh...</em></li>
+							</ul></li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Variáveis</h3>
+<pre><code class="php">&lt;?php
+    name = 'Pedro';    # string(5) "Pedro"
+    $a = 1;            # int(1)
+    $b = 2;            # int(2)
+    $c = $a + $b;      # int(3)
+    $b *= $c;          # int(6)
+?&gt;</code></pre>
+						<ul>
+							<li>Linguagem não tipada</li>
+							<li>As variáveis não precisam de ser declaradas</li>
+							<li>Os identificadores começam <strong>sempre</strong> por <em>$</em></li>
+							<li>Os nomes são <em>case-sensitive</em></li>
+							<li>Existem variáveis reservadas<ul>
+								<li><code class="php">$_GET, $_POST, $_SESSION...</code></li>
+							</ul></li>
+						</ul>
+					</section>
+
+					<section>
+						<h3><em>Strings</em></h3>
+<pre><code class="php">&lt;?php
+    $name = 'Pedro';            # string(5) "Pedro"
+    $s1 = '$name';              # string(5) "$name"
+    $s2 = "$name";              # string(5) "Pedro"
+    $s3 = $s1 . ' = ' . $s2;    # string(10) "$name = Pedro"
+    $s4 = "Oh no!\n\t" . 'The line broke';
+                                # string(22) "Oh no!
+                                #     The line broke"
+?&gt;</code></pre>
+					</section>
+
+					<section>
+						<h3><em>Arrays</em></h3>
+<pre><code class="php">&lt;?php
+    $names = array('name' => 'Pedro', 'surname' => 'Costa')
+    $names[1] = 'CAOS';
+    $names['php'] = 2012:
+    var_dump($names);
+?&gt;</code></pre>
+<pre>array(4) {
+  ["name"]=>
+  string(5) "Pedro"
+  ["surname"]=>
+  string(5) "Costa"
+  [1]=>
+  string(4) "CAOS"
+  ["php"]=>
+  int(2012)
+}</pre>
+						<p>Cuidado com <em>type casting</em></p>
+					</section>
+
+					<section>
+						<h3><em>Output</em></h3>
+<pre><code>&lt;?php
+    $name = 'Pedro';
+    $caos['php'] = 2012;
+
+    echo $name . $caos['php'], "\n";
+    echo $name, $caos['php'], "\n";
+    echo "$name back in ${caos[php]}", "\n";
+?&gt;
+&lt;?= $name ?&gt;</code></pre>
+<h4>Resultado:</h4>
+<pre>
+Pedro2012
+Pedro2012
+Pedro back in 2012
+Pedro
+</pre>
+					</section>
+
+					<section>
+						<h3>If</h3>
+<pre><code>&lt;?php
+    $a = 5;
+    $b = 4;
+    if ($a == $b)
+        echo '$a and $b are the same';
+    else {
+        $c = $a * $b;
+        echo '$c  =  $a * $b  =  '. "$a * $b  =  $c";
+    }
+?&gt;</code></pre>
+					</section>
+
+					<section>
+						<h3>While</h3>
+<pre><code>&lt;?php
+    $i = 0;
+    while ($i < 10) {
+        echo "$i\n";
+        ++$i;
+    }
+?&gt;</code></pre>
+						<h3>For</h3>
+<pre><code>&lt;?php
+    for ($i = 0; $i < 10; ++$i)
+        echo "$i\n";
+?&gt;</code></pre>
+					</section>
+
+					<section>
+						<h3>Foreach</h3>
+<pre><code>&lt;?php
+    $me = array('name' => 'Pedro', 'surname' => 'Costa');
+
+    foreach ($me as $name)
+        echo "$name\n";
+
+    foreach ($me as $key => $value)
+        echo "$key => $value\n";
+?&gt;</code></pre>
+						<h4>Resultado</h4>
+<pre>Pedro
+Costa
+name => Pedro
+surname => Costa</pre>
+					</section>
+
+					<section>
+						<h3>Funções</h3>
+<pre><code>&lt;?php
+    function fibonacci ($n) {
+        if ($n == 0 || $n == 1)
+            return $n;
+        else
+            return $n + fibonacci($n - 1);
+    }
+
+    echo fibonacci(5), "\n";    # 15
+    echo FIBONACCI(6), "\n";    # 21
+    echo FiBoNaCCi(7), "\n";    # 28
+?&gt;</code></pre>
+					</section>
+
+					<section>
+						<h3>Inclusão de dependências</h3>
+<h4>hello.php</h4>					
+<pre><code>&lt;?php
+    function hello () {
+        return 'Workshop PHP 2012';
+    }
+?&gt;</code></pre>
+
+<h4>include.php</h4>					
+<pre><code>&lt;?php
+ // include('hello.php');
+ // include_once('hello.php');
+ // require('hello.php');
+    require_once('hello.php');
+    echo hello(), "\n";    # Workshop PHP 2012
+?&gt;</code></pre>
+					</section>
+
+				</section>
+
+				<section id="where">
+					<h2>The <em>where</em></h2>
+
+					<section>
+						<h3>Embedded</h3>
+<pre><code class="php">&lt;?php
+    require_once('prelude.php');
+?&gt;
+&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;&lt;?= $title ?&gt;&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;?php if ($ok) { ?&gt;
+            &lt;p&gt;Hello &lt;?= $name ?&gt;&lt;/p&gt;
+        &lt;?php } else { ?&gt;
+            &lt;p&gt;Bye &lt;?= $name ?&gt;&lt;/p&gt;
+        &lt;?php } ?&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+					</section>
+
+					<section>
+						<h3>Form</h3>
+						<h4>form.html</h4>
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Form2PHP&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;form action=&quot;form_.php&quot; method=&quot;post&quot;&gt;
+            &lt;label&gt;Message&lt;/label&gt;
+            &lt;input type=&quot;text&quot; name=&quot;message&quot; /&gt;
+            &lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;Send&quot; /&gt;
+        &lt;/form&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+					</section>
+
+					<section>
+						<h3>Form</h3>
+						<h4>form_.php</h4>
+<pre><code>&lt;?php
+    if (isset($_POST['message']))
+        echo $_POST['message'];
+    else
+        header('location: form.html');
+?&gt;</code></pre>
+					</section>
+				</section>
+
+				<section id="memory">
+					<h2><em>Keep going...</em></h2>
+
+					<section>
+						<h2>Sessions</h2>
+<pre><code>&lt;?php
+    session_start();
+    if (isset($_GET['off']) && $_GET['off'])
+        session_destroy();
+    else {
+        $now = date('d/m/Y H:i:s');
+        echo "Last access: ${_SESSION['last']}\n";
+        echo "Now: $now\n";
+        $_SESSION['last'] = $now;
+    }
+?&gt;</code></pre>
+						<ul>
+							<li>Informação guardada em cookies</li>
+						</ul>
+				</section>
+
+				<section id="fun">
+					<h2>The fun</h2>
+				</section>
+
+				<section>
+					<h2>The end</h2>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
