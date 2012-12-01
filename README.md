@@ -4,6 +4,7 @@
 <img src="https://raw.github.com/pfac/caos-php-2012/master/global/images/caos.logo.png?login=pfac&token=82497a9ee0f7dde7f9f7660a2bd6ae81" alt"CAOS" style="width:10em" />
 
 Pedro Costa
+
 Braga, Novembro 2012
 
 ## Conteúdo
