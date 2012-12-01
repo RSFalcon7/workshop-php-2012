@@ -98,7 +98,7 @@
 
 							<dt>Ubuntu</dt>
 							<dd>
-								<pre><code>$ sudo apt-get install apache2 \
+								<pre><code class="php">$ sudo apt-get install apache2 \
 mysql-server php5 php5-mysql</code></pre>
 							</dd>
 
@@ -180,7 +180,7 @@ mysql-server php5 php5-mysql</code></pre>
 
 					<section>
 						<h3><em>Strings</em></h3>
-<pre><code class="php">&lt;?php
+<pre style="font-size:.43em"><code class="php">&lt;?php
     $name = 'Pedro';            # string(5) "Pedro"
     $s1 = '$name';              # string(5) "$name"
     $s2 = "$name";              # string(5) "Pedro"
@@ -214,7 +214,7 @@ mysql-server php5 php5-mysql</code></pre>
 
 					<section>
 						<h3><em>Output</em></h3>
-<pre><code>&lt;?php
+<pre><code class="php">&lt;?php
     $name = 'Pedro';
     $caos['php'] = 2012;
 
@@ -234,7 +234,7 @@ Pedro
 
 					<section>
 						<h3>If</h3>
-<pre><code>&lt;?php
+<pre><code class="php">&lt;?php
     $a = 5;
     $b = 4;
     if ($a == $b)
@@ -248,7 +248,7 @@ Pedro
 
 					<section>
 						<h3>While</h3>
-<pre><code>&lt;?php
+<pre><code class="php">&lt;?php
     $i = 0;
     while ($i < 10) {
         echo "$i\n";
@@ -256,7 +256,7 @@ Pedro
     }
 ?&gt;</code></pre>
 						<h3>For</h3>
-<pre><code>&lt;?php
+<pre><code class="php">&lt;?php
     for ($i = 0; $i < 10; ++$i)
         echo "$i\n";
 ?&gt;</code></pre>
@@ -264,7 +264,7 @@ Pedro
 
 					<section>
 						<h3>Foreach</h3>
-<pre><code>&lt;?php
+<pre><code class="php">&lt;?php
     $me = array('name' => 'Pedro', 'surname' => 'Costa');
 
     foreach ($me as $name)
@@ -282,7 +282,7 @@ surname => Costa</pre>
 
 					<section>
 						<h3>Funções</h3>
-<pre><code>&lt;?php
+<pre><code class="php">&lt;?php
     function fibonacci ($n) {
         if ($n == 0 || $n == 1)
             return $n;
@@ -299,14 +299,14 @@ surname => Costa</pre>
 					<section>
 						<h3>Inclusão de dependências</h3>
 <h4>hello.php</h4>					
-<pre><code>&lt;?php
+<pre><code class="php">&lt;?php
     function hello () {
         return 'Workshop PHP 2012';
     }
 ?&gt;</code></pre>
 
 <h4>include.php</h4>					
-<pre><code>&lt;?php
+<pre><code class="php">&lt;?php
  // include('hello.php');
  // include_once('hello.php');
  // require('hello.php');
@@ -343,7 +343,7 @@ surname => Costa</pre>
 					<section>
 						<h3>Form</h3>
 						<h4>form.html</h4>
-<pre><code>&lt;!doctype html&gt;
+<pre><code class="html">&lt;!doctype html&gt;
 &lt;html&gt;
     &lt;head&gt;
         &lt;title&gt;Form2PHP&lt;/title&gt;
@@ -361,7 +361,7 @@ surname => Costa</pre>
 					<section>
 						<h3>Form</h3>
 						<h4>form_.php</h4>
-<pre><code>&lt;?php
+<pre><code class="php">&lt;?php
     if (isset($_POST['message']))
         echo $_POST['message'];
     else
@@ -375,7 +375,7 @@ surname => Costa</pre>
 
 					<section>
 						<h3>Sessions</h3>
-<pre><code>&lt;?php
+<pre><code class="php">&lt;?php
     session_start();
     if (isset($_GET['off']) && $_GET['off'])
         session_destroy();
@@ -394,7 +394,7 @@ surname => Costa</pre>
 					<section>
 						<h3>Base de dados</h3>
 						<h4>PDO MySQL</h4>
-<pre><code>&lt;?php
+<pre><code class="php">&lt;?php
     require_once('mysqlinfo.php');
     try {
         $mysql_cons = "mysql:host=$mysql_host;dbname=$mysql_db";
@@ -413,7 +413,7 @@ surname => Costa</pre>
 					<section>
 						<h3>Base de dados</h3>
 						<h4>MySQLi</h4>
-<pre><code>&lt;?php
+<pre style="font-size:0.43em"><code class="php">&lt;?php
     require_once('mysqlinfo.php');
 
     $con = new mysqli($mysql_host, $mysql_user, $mysql_pass, $mysql_db);
@@ -438,10 +438,60 @@ surname => Costa</pre>
 
 				<section id="fun">
 					<h2>The fun</h2>
+
+					<ul>
+						<li>Verificar a pasta "samples"</li>
+						<li><strong><code>example.php</code></strong> escrito durante o workshop</li>
+					</ul>
 				</section>
 
 				<section>
 					<h2>The end</h2>
+					<section>
+						<h3>Referências</h3>
+						<ul>
+							<li><a target="_blank" href="http://www.php.net">PHP.net</a></li>
+							<li><a target="_blank" href="http://www.w3schools.com">W3 schools</a></li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Coisas mesmo muito úteis</h3>
+						<ul>
+							<li>Yii Framework<br /><a target="_blank" href="http://www.yiiframework.com/">http://www.yiiframework.com/</a></li>
+							<li>CakePHP<br /><a target="_blank" href="http://www.cakephp.org">http://www.cakephp.org</a></li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Extras</h3>
+						<ul>
+							<li>Twitter Bootstrap<br /><a target="_blank" href="http://twitter.github.com/bootstrap/">http://twitter.github.com/bootstrap/</a></li>
+							<li>Zurb Fountation<br /><a target="_blank" href="http://foundation.zurb.com/">http://foundation.zurb.com/</a></li>
+							<li>jQuery<br /><a target="_blank" href="http://jquery.com/">http://jquery.com/</a></li>
+						</ul>
+					</section>
+
+					<section>
+						<h1>Workshop <strong>PHP</strong></h1>
+						<ul id="authorinfo">
+							<li class="name">Pedro Costa</li>
+							<!-- <li class="mail">pdrcosta90@gmail.com</li> -->
+							<li class="">caos@cesium.di.uminho.pt</li>
+						</ul>
+						<ul class="logos">
+							<li>
+								<img src="../global/images/cesium.png" />
+							</li>
+							<li>
+								<img src="../global/images/caos.png" />
+							</li>
+						</ul>
+						<ul id="presentationinfo">
+							<li class="date">Braga, Novembro 2012</li>
+						</ul>
+					</section>
+
 				</section>
 			</div>
 
