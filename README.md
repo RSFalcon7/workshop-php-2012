@@ -1,9 +1,9 @@
-# Workshop PHP 2012
+# Workshop PHP
 
 <img src="https://raw.github.com/pfac/caos-php-2012/master/global/images/cesium.logo.png?login=pfac&token=cde31e13fa440b085d0a6dc911ff75db" alt="CeSIUM" style="width:10em" />
 <img src="https://raw.github.com/pfac/caos-php-2012/master/global/images/caos.logo.png?login=pfac&token=82497a9ee0f7dde7f9f7660a2bd6ae81" alt"CAOS" style="width:10em" />
 
-Pedro Costa
+__Pedro Costa__
 
 Braga, Novembro 2012
 
